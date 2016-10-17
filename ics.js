@@ -123,7 +123,7 @@ var ics = function() {
             // Since some calendars don't add 0 second events, we need to remove time if there is none...
             var start_time = '';
             var end_time = '';
-            if ((end_hours - start_hours) + (end_minutes - start_minutes) + (end_seconds - start_seconds) !== 0) {
+            if ((end_hours - start_hours) !== 0 || (end_minutes - start_minutes) !== 0 || (end_seconds - start_seconds) !== 0) {
                 start_time = 'T' + start_hours + start_minutes + start_seconds;
                 end_time = 'T' + end_hours + end_minutes + end_seconds;
             }
